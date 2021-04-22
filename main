@@ -1,0 +1,83 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "90 100 22 39 40 20 12 15 34 65 86 43";
+        int countSpace = 0;
+        int size = 0;
+        int soma = 0;
+        int qNum = 0;
+        int[] espaco = new int[100];
+
+        ArrayList<Integer> lista = new ArrayList<Integer>;
+        ArrayList<Integer> Nmenores = new ArrayList<Integer>();
+        // adicionando o primeiro numero
+        lista.add(Integer.parseInt(str.substring(0, str.intexOf(" ")))); 
+
+            // loop de espaco
+        for(int i=0; i < str.length(); i++ ){
+            if( str.charAt(i) == ' ' ) {
+                space[countSpace] = i;
+                countSpace++;
+            }
+        }
+
+        // loop para colocar o numero
+        for(int i = 0; i < space.length; i++) {
+            if(space[i] !=0){
+                int index = space[i] + 1;
+                if(i == countSpace - 1) {
+                    int num = Integer.parseInt(str.substring(index, str.length()));
+                    lista.add(num);
+                }
+                else {
+                    int num = Integer.parseInt(str.substring(index, space[i+1]));
+                    lista.add(num);
+                }
+            }
+        }
+        System.out.println("Bem vindo a Piramide de numeros");
+        System.out.println("Se divirta nesta brincadeira de numeros")
+
+        while(size < lista.size()) {
+            int menor = 0;
+            
+            System.out.println("[");
+
+            for(int i = 0; i <= qNum, i++) {
+                if(size < lista.size()) {
+                    if(i == qNum){
+                        if(size == 0){
+                            menor = lista.get(size);
+                            System.out.println(lista.get(size));
+                        }
+                        else{
+                            System.out.println(lista.get(size));
+                            if(lista.get(size) < menor) menor = lista.get(size);
+                        }
+                    }
+                    else {
+                        if(i == 0) {
+                            menor = lista.get(size);
+                        }
+                        else{
+                            if(lista.get(size) < menor) menor = lista.get(size);
+                        }
+                        System.out.println(lista.get(size)+ ", ");
+                    }
+                    size++;
+                }
+            }
+            System.out.println("]")
+            menores.add(menor);
+            soma += menor;
+            qNum++;
+        }
+        
+        System.out.println("fim da Piramide ou pinheiro")
+        System.out.println("Quantidade de numeros na piramide/pinheiro: " + (countSpace + 1));
+        System.out.println("Lista de numeros: " + lista)
+        System.out.println("Os menores valores de cada coluna são: " + menores);
+        System.out.println("A soma dos menores valores é " + soma);
+    }
+}
